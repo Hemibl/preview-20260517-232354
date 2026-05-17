@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מסמך שיחה משפחתי - ייפוי כוח מתמשך ליוסי</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f0;
+    color: #1a1a1a;
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 58px 68px;
+    box-shadow: 0 2px 22px rgba(0,0,0,0.06);
+    border-radius: 6px;
+  }
+  header {
+    border-bottom: 3px solid #1a1a1a;
+    padding-bottom: 24px;
+    margin-bottom: 34px;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 18px;
+    color: #555;
+  }
+  .meta {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  h2 {
+    font-size: 25px;
+    margin-top: 46px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e2dc;
+  }
+  h3 {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+  p, li {
+    font-size: 16px;
+    margin-bottom: 9px;
+  }
+  ol, ul {
+    margin-right: 24px;
+    margin-bottom: 12px;
+  }
+  .notice {
+    background: #fef9e7;
+    border-right: 5px solid #c89b14;
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    border-radius: 3px;
+  }
+  .notice h2, .notice h3 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
+  .principle {
+    background: #f4f6f7;
+    border-right: 5px solid #5d6d7e;
+    padding: 20px 24px;
+    margin: 26px 0;
+    border-radius: 3px;
+  }
+  .section {
+    margin-top: 28px;
+    padding: 26px 28px;
+    border: 1px solid #e5e5df;
+    border-right: 6px solid #2874a6;
+    border-radius: 5px;
+    background: #fbfbfa;
+  }
+  .section.critical { border-right-color: #c0392b; background: #fdf5f3; }
+  .section.important { border-right-color: #d68910; background: #fff8ec; }
+  .section.task { border-right-color: #5d6d7e; background: #f6f7f8; }
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: #1a1a1a;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .block {
+    background: #fff;
+    border: 1px solid #e4e4de;
+    border-radius: 4px;
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .block h3 {
+    font-size: 17px;
+    margin: 0 0 8px 0;
+  }
+  .questions li { margin-bottom: 7px; }
+  .decision-box {
+    background: #fff;
+    border: 2px dashed #bbb;
+    padding: 14px 16px;
+    margin-top: 14px;
+    min-height: 58px;
+    border-radius: 4px;
+  }
+  .decision-title {
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .line {
+    border-bottom: 1px solid #ddd;
+    height: 24px;
+    margin-top: 6px;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    background: #fff;
+    font-size: 15px;
+  }
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: right;
+    vertical-align: top;
+  }
+  .table th { background: #f1f1ed; font-weight: 700; }
+  .checklist {
+    margin-top: 38px;
+    background: #f0f4f8;
+    padding: 24px 28px;
+    border-radius: 5px;
+  }
+  .checklist h2 { margin-top: 0; border-bottom: 2px solid #1a1a1a; }
+  .check-item {
+    background: #fff;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  input[type="checkbox"] { margin-top: 5px; transform: scale(1.25); }
+  .footer-note {
+    margin-top: 42px;
+    padding-top: 22px;
+    border-top: 2px solid #e5e5e0;
+    color: #777;
+    font-size: 14px;
+    font-style: italic;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .container { box-shadow: none; padding: 20px; max-width: none; }
+    .section { break-inside: avoid; }
+  }
+  @media (max-width: 700px) {
+    body { padding: 20px 10px; }
+    .container { padding: 30px 22px; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 21px; }
+    .section { padding: 20px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>מסמך שיחה משפחתי לקראת ייפוי כוח מתמשך</h1>
+  <div class="subtitle">יוסף אביגדור בן־לביא | שיחה משפחתית של יוסי, גבי, אירית וחמי</div>
+  <div class="meta">מסמך עבודה פנימי לקראת הפגישה הבאה עם עו״ד יובל גנן | עודכן לאחר הפגישה מיום 5.5.2026</div>
+</header>
+
+<div class="notice">
+  <h3>מה מטרת המסמך</h3>
+  <p>המסמך הזה אינו נוסח משפטי לחתימה, ואינו מחליף את ייפוי הכוח המתמשך שייערך אצל עורך הדין. מטרתו ליצור מרחב שיחה מסודר בין אבא לבין שלושת הילדים, ובמידת הצורך גם בינינו האחים בנפרד, כדי להבין מראש מה אבא רוצה, מה אנחנו צריכים לברר, ואילו החלטות אסור להשאיר לרגעי לחץ.</p>
+  <p>ייפוי כוח מתמשך אינו רק טופס טכני. זהו מסמך שבו אבא, כל עוד הוא מבין ויכול להביע רצון, מנחה אותנו מה לעשות אם בעתיד לא יוכל לקבל החלטות בעצמו. לכן השיחה חשובה לא פחות מהחתימה: היא מאפשרת לנו לשמוע ממנו ישירות, ולא לנחש בעתיד מה הוא היה רוצה.</p>
+  <p>העיקרון המנחה: לא להגיע לעורך הדין עם “מסמך מוכן לאבא”, אלא עם שאלות, אפשרויות והחלטות שאבא היה שותף להן ככל האפשר.</p>
+</div>
+
+<div class="principle">
+  <h3>איך להשתמש במסמך</h3>
+  <ol>
+    <li>לעבור על כל נושא ולשאול קודם את אבא, ככל שהוא רוצה ויכול להשתתף.</li>
+    <li>להפריד בין שלושה מצבים: מה אבא אמר, מה האחים סיכמו, ומה עדיין פתוח.</li>
+    <li>לא לנסות לסגור הכול בשיחה אחת. עדיף לסמן נושאים פתוחים מאשר לקבל החלטות חפוזות.</li>
+    <li>להביא את ההחלטות והשאלות הפתוחות לעו״ד יובל גנן, כדי שיבדוק מה ניתן וצריך להכניס לייפוי הכוח עצמו.</li>
+  </ol>
+</div>
+
+<h2>א. תנאי יסוד לפני חתימה</h2>
+
+<div class="section critical">
+  <span class="tag">חובה לברר לפני החתימה</span>
+  <h2>1. כשירות אבא לחתום על ייפוי כוח מתמשך</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>חתימה על ייפוי כוח מתמשך דורשת שאבא יבין את משמעות המסמך, את זהות מיופי הכוח, את הסמכויות שהוא נותן להם, ואת האפשרות שבעתיד המסמך יופעל כשהוא כבר לא יוכל להחליט לבד. בגלל סימני השכחה שהופיעו בשנה האחרונה והממצאים הרפואיים שדורשים בירור, חשוב לחזק את תוקף החתימה באמצעות חוות דעת רפואית מתאימה.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לבירור</h3>
+    <ol>
+      <li>איזה רופא מתאים לתת חוות דעת: גריאטר, פסיכוגריאטר או נוירולוג?</li>
+      <li>האם חוות הדעת תינתן לפני החתימה ותצורף לתיק המסמכים?</li>
+      <li>האם יובל מבקש נוסח מסוים לחוות הדעת?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">החלטה / סטטוס:</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="section critical">
+  <span class="tag">חובה להחליט לפני החתימה</span>
+  <h2>2. מתי ייפוי הכוח נכנס לתוקף</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>צריך להגדיר בצורה ברורה מתי הילדים מתחילים לפעול בשם אבא. אפשרות אחת היא שהייפוי יופעל רק בעתיד, אם אבא כבר לא יוכל להבין ולקבל החלטות בעצמו. אפשרות אחרת, בעיקר בענייני רכוש ובירוקרטיה, היא לתת סמכות מסוימת כבר קודם. צריך להחליט מה נכון לאבא ומה שומר על העצמאות שלו.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאבא</h3>
+    <ol>
+      <li>האם אתה רוצה שנוכל לעזור לך כבר עכשיו בעניינים טכניים, כמו ביטוחים, בנקים, קופות ובירוקרטיה?</li>
+      <li>או שאתה מעדיף שהייפוי יופעל רק אם רופא יקבע שאתה כבר לא מסוגל לקבל החלטות לבד?</li>
+      <li>מי לדעתך צריך לקבוע את זה: רופא משפחה, גריאטר, נוירולוג, שני רופאים?</li>
+    </ol>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאחים</h3>
+    <ol>
+      <li>האם יש צורך פרקטי בסמכויות מוגבלות כבר עכשיו?</li>
+      <li>אם כן, איך מוודאים שזה לא פוגע בתחושת העצמאות של אבא?</li>
+      <li>האם נכון להמליץ ליובל שההפעלה תהיה רק לאחר חוות דעת רפואית של מומחה?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">מה אבא אמר / מה סוכם:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<h2>ב. איך אנחנו, האחים, מקבלים החלטות</h2>
+
+<div class="section critical">
+  <span class="tag">חובה להחליט לפני החתימה</span>
+  <h2>3. מנגנון קבלת החלטות בין גבי, אירית וחמי</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>בפגישה עם יובל עלתה אפשרות שכל שלושת הילדים יהיו מיופי כוח בכל התחומים, וש״הרוב קובע״. זה נשמע הוגן, אבל בפועל עלול ליצור עומס תפעולי ומתחים: כל פעולה דורשת תיאום, ובמצבי לחץ עלולה להיווצר תחושה של “שניים נגד אחד”. לכן עדיף לקבוע מדרג החלטות לפי סוג ההחלטה.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאחים</h3>
+    <ol>
+      <li>האם שלושתנו רוצים להיות מיופי כוח בכל התחומים?</li>
+      <li>האם יש אחד מאיתנו שיהיה אחראי בפועל על הניהול היומיומי?</li>
+      <li>באילו פעולות מספיק שמיופה כוח אחד יפעל ויעדכן?</li>
+      <li>באילו פעולות נדרשים שניים מתוך שלושה?</li>
+      <li>באילו החלטות חייבים, ככל שניתן, הסכמה של שלושתנו?</li>
+      <li>מה עושים אם אחד מאיתנו לא זמין, לא עונה, חולה, בחו״ל או לא מסוגל להשתתף בהחלטה?</li>
+    </ol>
+  </div>
+  <div class="block">
+    <h3>מודל מוצע לדיון</h3>
+    <table class="table">
+      <tr><th>סוג החלטה</th><th>מנגנון אפשרי</th><th>הערות</th></tr>
+      <tr><td>פעולות יומיומיות ובירוקרטיות</td><td>מיופה כוח אחד פועל ומעדכן</td><td>לדוגמה: קביעת תורים, תשלומים שוטפים, טיפול מול קופת חולים.</td></tr>
+      <tr><td>פעולות כספיות משמעותיות</td><td>שניים מתוך שלושה</td><td>מעל סכום שייקבע מראש, למשל 20,000 / 50,000 / 100,000 ₪.</td></tr>
+      <tr><td>החלטות כבדות</td><td>שלושתנו, ככל שניתן</td><td>לדוגמה: מכירת בית, מעבר למסגרת סיעודית קבועה, שינוי מהותי בטיפול.</td></tr>
+      <tr><td>מצב רפואי דחוף</td><td>מי שזמין מול הצוות הרפואי פועל ומעדכן מיד</td><td>כדי לא לעכב טיפול רפואי.</td></tr>
+    </table>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">החלטה / מודל שנבחר:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="section important">
+  <span class="tag">חשוב לסגור</span>
+  <h2>4. מיופי כוח חליפיים</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>צריך לקבוע מה קורה אם אחד משלושת הילדים לא יוכל לשמש מיופה כוח: פטירה, מחלה, מעבר לחו״ל, חוסר זמינות מתמשך או קושי אישי לשאת בתפקיד.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לדיון</h3>
+    <ol>
+      <li>האם אם אחד מאיתנו לא יכול לפעול, השניים האחרים ממשיכים לבד?</li>
+      <li>האם ממנים מחליף במקום מיופה כוח שיצא מהתפקיד?</li>
+      <li>מי יכול להיות מחליף מתאים: בן/בת זוג, נכד/ה בגיר/ה, אדם אחר?</li>
+      <li>האם מחליף נכנס לכל התחומים או רק לתחום מסוים?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">החלטה / נשאר פתוח:</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<h2>ג. אבא, רחל והמעגל המשפחתי</h2>
+
+<div class="section important">
+  <span class="tag">חשוב ועדין</span>
+  <h2>5. תפקידה של רחל</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>רחל היא בת זוגו של אבא וחיה איתו, אבל לפי ההבנה המשפחתית והסכם הממון, הילדים הם אלה שאמורים לטפל בענייני אבא אם יזדקק לכך. לכן צריך להחליט האם רחל רק מיודעת, האם מתייעצים איתה, ובאילו נושאים.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאבא</h3>
+    <ol>
+      <li>האם אתה רוצה שרחל תהיה מעורבת בהחלטות רפואיות?</li>
+      <li>האם אתה רוצה שרחל תקבל עדכונים בלבד, או שגם נתייעץ איתה לפני החלטות?</li>
+      <li>האם יש החלטות שאתה רוצה שיהיו רק של הילדים?</li>
+      <li>מה קורה אם רחל לא תהיה כשירה או לא תרצה להיות מעורבת?</li>
+    </ol>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לרחל, אם מחליטים לדבר איתה</h3>
+    <ol>
+      <li>האם את רוצה להיות במעגל ההתייעצות?</li>
+      <li>האם את רוצה לקבל עדכונים רפואיים או אישיים?</li>
+      <li>האם יש משהו שחשוב לך שיוסדר מראש כדי למנוע אי־הבנות?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">מה אבא אמר / מה צריך לשאול את רחל:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<h2>ד. מקום מגורים, טיפול יומיומי ואיכות חיים</h2>
+
+<div class="section important">
+  <span class="tag">רצון אישי של אבא</span>
+  <h2>6. דיור עתידי וטיפול סיעודי</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>כיום אבא חי בקדומים עם רחל. אם בעתיד הוא יזדקק לעזרה קבועה, צריך לדעת מה העדפתו: להישאר בבית עם מטפל, לעבור לבית בכפר סבא, לעבור למסגרת דיור מוגן או סיעודית, או להיות קרוב לאחד הילדים.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאבא</h3>
+    <ol>
+      <li>אם יהיה צורך בעזרה קבועה, מה אתה מעדיף: מטפל בבית, חזרה לכפר סבא, דיור מוגן, בית אבות או מגורים ליד אחד הילדים?</li>
+      <li>האם חשוב לך שהמקום יהיה דתי או מסורתי?</li>
+      <li>האם חשוב לך אזור גיאוגרפי מסוים?</li>
+      <li>האם תהיה מוכן למטפל זר שאינו יהודי?</li>
+      <li>האם יש סוג מסגרת שאתה ממש לא רוצה?</li>
+    </ol>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאחים</h3>
+    <ol>
+      <li>האם מישהו מאיתנו באמת יכול לקחת אחריות יומיומית, ואם כן באיזו רמה?</li>
+      <li>האם יש ציפייה שאבא יעבור לגור עם אחד מאיתנו?</li>
+      <li>אם אחד הילדים לוקח יותר אחריות, איך מונעים עומס לא הוגן עליו?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">רצון אבא / נקודות פתוחות:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="section important">
+  <span class="tag">נכס מרכזי</span>
+  <h2>7. הבית בכפר סבא</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>הבית בכפר סבא הוא הנכס המרכזי של אבא. ייתכן שבעתיד יהיה צורך להשתמש בו למימון טיפול, סיעוד, דיור או צרכים רפואיים. לכן צריך לתעד מראש מה אבא רוצה שיקרה עם הבית, ואיך אנחנו מקבלים החלטות לגביו.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאבא</h3>
+    <ol>
+      <li>מה היית רוצה שיקרה עם הבית אם לא תוכל לגור בו או להגיע אליו?</li>
+      <li>האם חשוב לך לשמור אותו במשפחה?</li>
+      <li>האם אתה מסכים שהוא יושכר כדי לממן טיפול?</li>
+      <li>האם אתה מסכים שהוא יימכר אם יהיה צורך אמיתי לממן טיפול סיעודי או רפואי?</li>
+      <li>האם אתה רוצה לאפשר לילד או נכד לגור בבית? אם כן, באילו תנאים?</li>
+    </ol>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאחים</h3>
+    <ol>
+      <li>מי מטפל בפועל בבית: תחזוקה, השכרה, ביטוח, ארנונה ותיקונים?</li>
+      <li>האם השכרת הבית דורשת רוב או הסכמת כולם?</li>
+      <li>האם מכירת הבית דורשת הסכמה של שלושתנו?</li>
+      <li>מה עושים אם אחד מאיתנו לא משתף פעולה או לא זמין?</li>
+      <li>איך מונעים ניגוד עניינים אם בן משפחה רוצה להשתמש בבית?</li>
+    </ol>
+  </div>
+  <div class="block">
+    <h3>נוסח עקרוני שאפשר לבקש מיובל לשקול</h3>
+    <p>אבא מביע את רצונו שהבית יישמר ככל שניתן, אך אם יהיה צורך ממשי במימון טיפול, דיור, סיעוד או צרכים רפואיים, מיופי הכוח יוכלו לפעול להשכרתו או למכירתו, בכפוף לכל אישור הנדרש לפי דין, לאחר בדיקת חלופות ותיעוד ההחלטה בכתב.</p>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">רצון אבא / החלטת האחים:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<h2>ה. בריאות, סוף חיים והלכה</h2>
+
+<div class="section important">
+  <span class="tag">חשוב לפתוח עכשיו</span>
+  <h2>8. החלטות רפואיות והיבטים הלכתיים</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>אבא דתי לאומי, ולכן בהחלטות רפואיות משמעותיות ייתכן שירצה שיקול הלכתי. מאחר שאין רב אישי קבוע, כדאי לקבוע מראש האם מתייעצים עם רב מומחה ברפואה והלכה, ובאילו מצבים.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאבא</h3>
+    <ol>
+      <li>האם חשוב לך שבהחלטות רפואיות משמעותיות נתייעץ עם רב?</li>
+      <li>אם כן, עם מי: רב מסוים, מכון פוע״ה, מכון שלזינגר, צומת או גורם אחר?</li>
+      <li>מה חשוב לך יותר במצב רפואי קשה: הארכת חיים בכל מחיר, מניעת סבל, שמירה על צלילות, שמירה על כבוד?</li>
+      <li>האם יש טיפולים שאתה יודע שאינך רוצה במצב סופני?</li>
+      <li>האם אתה רוצה שנערוך גם מסמך נפרד של הנחיות רפואיות מקדימות?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">רצון אבא / שאלות ליובל:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="section important">
+  <span class="tag">מסמך נפרד</span>
+  <h2>9. הנחיות רפואיות מקדימות לפי חוק החולה הנוטה למות</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>ייפוי כוח מתמשך אינו בהכרח מספיק לשאלות של סוף חיים, כגון החייאה, הנשמה, הזנה מלאכותית, דיאליזה או טיפולים מאריכי חיים במצב סופני. לכן כדאי לשאול את יובל האם נכון לערוך במקביל מסמך נפרד של הנחיות רפואיות מקדימות.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לדיון</h3>
+    <ol>
+      <li>האם אבא מוכן לדבר על העדפות סוף חיים?</li>
+      <li>האם כדאי לקבוע שיחה נפרדת רק לנושא הזה, בלי לערבב עם ענייני רכוש?</li>
+      <li>האם יובל מוסמך ומנוסה גם בעריכת מסמך זה, או שצריך גורם נוסף?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">החלטה / המשך טיפול:</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<h2>ו. כסף, רכוש, מתנות ובקרה</h2>
+
+<div class="section important">
+  <span class="tag">תפעול ובקרה</span>
+  <h2>10. סמכויות פיננסיות ופירוט נכסים</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>אמירה כללית כמו “לפעול בחשבונות הבנק” עלולה להיות לא מספיקה מול בנקים, חברות ביטוח, קופות גמל, ביטוח לאומי ורשויות. צריך למפות את הנכסים ולוודא שיובל מכניס סמכויות מפורטות ומעשיות.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות ובירורים</h3>
+    <ol>
+      <li>אילו חשבונות בנק קיימים, כולל החשבון המשותף עם רחל?</li>
+      <li>אילו ביטוחים קיימים: חיים, בריאות, סיעודי?</li>
+      <li>אילו קופות גמל, קרנות השתלמות, פנסיות או חסכונות קיימים?</li>
+      <li>מי איש הקשר בכל גוף: בנק, סוכן ביטוח, חברת ביטוח, קופה?</li>
+      <li>האם יש מסמכים מרוכזים בתיק מסודר?</li>
+    </ol>
+  </div>
+  <div class="block">
+    <h3>סמכויות לבקש מיובל לבדוק</h3>
+    <p>טיפול בחשבונות בנק, כרטיסי אשראי והוראות קבע; טיפול מול ביטוח לאומי, מס הכנסה, קופת חולים וחברות ביטוח; קבלת מידע ושחרור מידע; טיפול בקופות גמל, פנסיה וקרנות; שכירת בעלי מקצוע; טיפול בהשכרת דירה, תחזוקה, ביטוח, ארנונה ומיסוי.</p>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">מה חסר לנו לדעת:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="section important">
+  <span class="tag">שמירה על אמון</span>
+  <h2>11. בקרה ושקיפות בין האחים</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>גם במשפחות עם יחסים טובים, טיפול בכספי הורה יכול ליצור מתחים. מנגנוני בקרה אינם מבטאים חוסר אמון; הם מגינים על אבא ועל הקשר בין האחים.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאחים</h3>
+    <ol>
+      <li>האם ננהל דיווח רבעוני או חצי שנתי בינינו?</li>
+      <li>מי מכין את הדיווח?</li>
+      <li>אילו הוצאות חייבות להיות מתועדות?</li>
+      <li>מעל איזה סכום צריך אישור של שניים או שלושה?</li>
+      <li>האם נכניס איסור מפורש על עסקאות בין מיופה כוח לבין אבא?</li>
+      <li>האם צריך אדם מיודע חיצוני שיקבל עדכון תקופתי?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">מנגנון בקרה שנבחר:</div>
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="section important">
+  <span class="tag">רצון אישי וכספי</span>
+  <h2>12. מתנות, עזרה לילדים, תרומות וצדקה</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>אחרי הפעלת ייפוי הכוח יהיה קשה לדעת אילו מתנות ותרומות אבא היה רוצה להמשיך לתת. לכן כדאי לתעד עכשיו את רצונו, תוך שמירה על העיקרון שצרכיו הרפואיים והסיעודיים קודמים לכל מתנה או תרומה.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאבא</h3>
+    <ol>
+      <li>האם יש תרומות קבועות שאתה נותן ורוצה שיימשכו?</li>
+      <li>האם אתה רוצה להמשיך לתת מתנות לנכדים באירועים?</li>
+      <li>באילו אירועים: בר/בת מצווה, חתונה, לידה, חגים?</li>
+      <li>באילו סכומים?</li>
+      <li>האם כולם מקבלים שווה?</li>
+      <li>האם המתנות ימשיכו רק אם יש מספיק כסף לטיפול בך?</li>
+    </ol>
+  </div>
+  <table class="table">
+    <tr><th>סוג מתנה / תרומה</th><th>סכום רצוי</th><th>למי</th><th>תנאים</th></tr>
+    <tr><td>חתונת נכד/ה</td><td></td><td></td><td></td></tr>
+    <tr><td>בר/בת מצווה</td><td></td><td></td><td></td></tr>
+    <tr><td>לידה / חג</td><td></td><td></td><td></td></tr>
+    <tr><td>תרומה קבועה</td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="decision-box">
+    <div class="decision-title">רצון אבא:</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<h2>ז. פרטיות, טיפול בבית ומצלמות</h2>
+
+<div class="section task">
+  <span class="tag">לסגור עם יובל</span>
+  <h2>13. מצלמות בבית ופיקוח על מטפל</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>מצלמות יכולות לעזור לשמור על אבא ולפקח על טיפול, אבל צריך לשמור גם על פרטיותו וכבודו, וגם ליידע מראש כל מטפל קבוע.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לדיון</h3>
+    <ol>
+      <li>האם אבא מסכים עקרונית להתקנת מצלמות אם יהיה מטפל בבית?</li>
+      <li>איפה מותר להתקין מצלמות ואיפה אסור?</li>
+      <li>מי רשאי לצפות בצילומים?</li>
+      <li>האם המטפל יקבל הודעה בכתב לפני תחילת העבודה?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">החלטה / נוסח לבדיקת יובל:</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<h2>ח. מסמכים ומשימות בירור</h2>
+
+<div class="section task">
+  <span class="tag">משימה לפני הפגישה</span>
+  <h2>14. אימות הסכם הממון עם רחל</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>עלתה טיוטת הסכם ממון משנת 2020, אך לא ברור אם קיימת גרסה חתומה ומאומתת. מאחר שההסכם משפיע על שאלת האחריות לטיפול ועל מימון סיעוד מנכסי אבא, חובה לראות את הגרסה הסופית.</p>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">סטטוס:</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="section task">
+  <span class="tag">לביצוע על ידי אבא כל עוד הוא כשיר</span>
+  <h2>15. עדכון מוטבים בפוליסות, קופות ופנסיה</h2>
+  <div class="block">
+    <h3>למה זה חשוב</h3>
+    <p>טופס המוטבים בהראל משנת 2018 מציין את שלושת הילדים. צריך לבדוק אם זה עדיין משקף את רצון אבא, והאם יש צורך במוטבים חליפיים למקרה שאחד הילדים ילך לעולמו לפניו. חשוב להבין: עדכון מוטבים הוא פעולה שאבא צריך לבצע בעצמו כל עוד הוא כשיר, ולא נכון לדחות זאת לשלב שבו ייפוי הכוח יופעל.</p>
+  </div>
+  <div class="block questions">
+    <h3>שאלות לאבא</h3>
+    <ol>
+      <li>האם חלוקת המוטבים הקיימת עדיין משקפת את רצונך?</li>
+      <li>מה קורה אם אחד הילדים הולך לעולמו לפניך?</li>
+      <li>האם ילדיו של אותו ילד נכנסים במקומו?</li>
+    </ol>
+  </div>
+  <div class="decision-box">
+    <div class="decision-title">החלטה / בירור מול הראל וסוכן הביטוח:</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
+<div class="checklist">
+  <h2>צ׳ק־ליסט לפני הפגישה הבאה עם יובל</h2>
+  <div class="check-item"><input type="checkbox"><div>לקיים שיחה משפחתית ראשונה עם אבא, גבי, אירית וחמי, ולעבור לפחות על נושאי הליבה: כניסה לתוקף, מנגנון החלטות, הבית בכפר סבא, רחל, דיור וטיפול.</div></div>
+  <div class="check-item"><input type="checkbox"><div>לקבוע חוות דעת רפואית מתאימה לגבי כשירות אבא לחתום על ייפוי כוח מתמשך.</div></div>
+  <div class="check-item"><input type="checkbox"><div>לוודא עם יובל איזה נוסח רפואי הוא מבקש לחוות הדעת.</div></div>
+  <div class="check-item"><input type="checkbox"><div>להחליט בין האחים על מודל קבלת החלטות מדורג ולא רק “רוב קובע” כללי.</div></div>
+  <div class="check-item"><input type="checkbox"><div>להחליט האם רחל היא אדם מיודע, גורם להתייעצות, או רק מי שמקבלת עדכונים לפי צורך.</div></div>
+  <div class="check-item"><input type="checkbox"><div>לוודא קיומה של גרסה חתומה ומאומתת של הסכם הממון עם רחל.</div></div>
+  <div class="check-item"><input type="checkbox"><div>למפות את כל נכסי אבא: בנקים, פוליסות, קופות, פנסיה, חסכונות, ביטוחים וזכויות.</div></div>
+  <div class="check-item"><input type="checkbox"><div>לפנות לשמעון, סוכן הביטוח, ולקבל תמונה מלאה של ביטוחי חיים, ביטוח סיעודי, קופות גמל, קרנות השתלמות ופנסיה.</div></div>
+  <div class="check-item"><input type="checkbox"><div>לעדכן מוטבים בפוליסות ובקופות, אם אבא רוצה בכך, כל עוד הוא כשיר.</div></div>
+  <div class="check-item"><input type="checkbox"><div>לשאול את יובל האם נכון לערוך במקביל מסמך הנחיות רפואיות מקדימות לפי חוק החולה הנוטה למות.</div></div>
+  <div class="check-item"><input type="checkbox"><div>לוודא שיובל מקיים עם אבא שיחה אישית ללא הילדים בחדר, כדי להתרשם מהבנתו, מרצונו החופשי ומהיעדר לחץ.</div></div>
+</div>
+
+<div class="footer-note">
+  מסמך זה הוא מסמך עבודה משפחתי פנימי בלבד. הוא אינו ייעוץ משפטי, אינו ייפוי כוח מתמשך ואינו מיועד לחתימה משפטית. מטרתו להכין את המשפחה לשיחה עם יוסי ולפגישה עם עו״ד מוסמך לעריכת ייפוי כוח מתמשך. כל החלטה משפטית מחייבת תיבדק ותנוסח על ידי עו״ד מוסמך ובהתאם לדין.
+</div>
+
+</div>
+</body>
+</html>
